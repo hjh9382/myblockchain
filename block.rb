@@ -2,14 +2,18 @@ class Dog #네이밍은 무조건 대문자 알파벳으로 시작한다
 
 def initialize
 	@weight = 0.5 #@라는 변수는 아래 def에서도 계속 사용할 수 있다.
+	@previous_weight = 0
 	@age = 1
+
 end
 
 def my_weight
+	puts "기존 몸무게 : " + @previous_weight.to_s
 	puts "현재 몸무게 : " + @weight.to_s
 end
 
 def eat
+	@previous_weight = @weight
 	@weight = @weight + 0.5
 	puts "먹는다"
 end
