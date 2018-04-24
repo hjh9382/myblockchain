@@ -1,12 +1,16 @@
 # encoding: UTF-8
 
 require 'sinatra'
+require './block'
 
+aaa = Dog.new
 
-get '/join' do
-	"회원가입 페이지 입니다."
+get '/' do
+	"Dog " + aaa.my_weight
 end
 
-get '/logout' do
-	"성공적으로 로그아웃 하셨습니다."
+get '/eat' do
+aaa.eat
+'먹었'
+
 end
