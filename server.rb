@@ -1,16 +1,9 @@
 # encoding: UTF-8
 
 require 'sinatra'
-require './block'
 
-aaa = Dog.new
 
 get '/' do
-	"Dog " + aaa.my_weight
+	"블럭리스트입니다."
 end
 
-get '/eat' do
-aaa.eat
-'먹었'
-
-end
